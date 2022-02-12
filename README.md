@@ -21,6 +21,8 @@
 
 # Bugs
 
+Could not get initial loop to work, changing the variable declaration form `let buttons = document.getElementsById("button");` to `let buttons = document.getElementsByTagName("button");` made it work.
+
 # Testing
 
 
