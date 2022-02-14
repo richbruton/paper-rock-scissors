@@ -1,7 +1,7 @@
 // wait for page to load
 
 let choices = ["paper", "rock", "scissors"]
-let p1Choice = "";
+// let p1Choice = "";
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
@@ -41,14 +41,12 @@ function checkDrawGame() {
 }
 
 function gameWinner() {
-    if (p1Choice = "rock") {
-        if (aiChoice = "paper") {
+    if (p1Choice == "rock") {
+        if (aiChoice == "paper") {
             console.log("AI wins");
-        } else {
+        } else if (aiChoice == "scissors") {
             console.log("P1 wins");
         }
-    } else {
-        console.log("carry on")
     }
 }
 
