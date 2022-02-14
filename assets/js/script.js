@@ -1,11 +1,9 @@
 // wait for page to load
 
 let choices = ["paper", "rock", "scissors"]
-// let p1Choice = "";
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-
 
     // player choice and computer choice
     for (let button of buttons) {
@@ -30,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 })
-
 
 function checkDrawGame() {
     if (p1Choice === aiChoice) {
