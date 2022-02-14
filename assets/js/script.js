@@ -11,17 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (this.getAttribute("data-type") === "rock") {
                 p1Choice = "rock";
-                aiChoice = choices[Math.floor(Math.random() * choices.length)];
-                console.log("AI chose",
-                    aiChoice);
-                console.log(p1Choice);
             } else if (this.getAttribute("data-type") === "paper") {
                 p1Choice = "paper";
-                aiChoice = choices[Math.floor(Math.random() * choices.length)];
             } else if (this.getAttribute("data-type") === "scissors") {
                 p1Choice = "scissors";
-                aiChoice = choices[Math.floor(Math.random() * choices.length)];
             }
+            aiChoice = choices[Math.floor(Math.random() * choices.length)];
+            console.log("AI chose",
+                aiChoice);
+            console.log("p1 chose", p1Choice);
             checkDrawGame();
         })
     }
