@@ -15,16 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("AI chose",
                     aiChoice);
                 console.log(p1Choice);
-                checkDrawGame();
             } else if (this.getAttribute("data-type") === "paper") {
                 p1Choice = "paper";
                 aiChoice = choices[Math.floor(Math.random() * choices.length)];
-                checkDrawGame();
             } else if (this.getAttribute("data-type") === "scissors") {
                 p1Choice = "scissors";
                 aiChoice = choices[Math.floor(Math.random() * choices.length)];
-                checkDrawGame();
             }
+            checkDrawGame();
         })
     }
 })
