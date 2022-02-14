@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (this.getAttribute("data-type") === "paper") {
                 p1Choice = "paper";
                 aiChoice = choices[Math.floor(Math.random() * choices.length)];
+                checkDrawGame();
             } else if (this.getAttribute("data-type") === "scissors") {
                 p1Choice = "scissors";
                 aiChoice = choices[Math.floor(Math.random() * choices.length)];
+                checkDrawGame();
             }
         })
     }
@@ -44,8 +46,26 @@ function gameWinner() {
     if (p1Choice == "rock") {
         if (aiChoice == "paper") {
             console.log("AI wins");
+            // updateAiScore();
         } else if (aiChoice == "scissors") {
             console.log("P1 wins");
+            // updateP1Score();
+        }
+    } else if (p1Choice == "paper") {
+        if (aiChoice == "scissors") {
+            console.log("AI wins");
+            // updateAiScore();
+        } else if (aiChoice == "rock") {
+            console.log("P1 wins");
+            // updateP1Score();
+        }
+    } else if (p1Choice == "scissors") {
+        if (aiChoice == "rock") {
+            console.log("AI wins");
+            // updateAiScore();
+        } else if (aiChoice == "paper") {
+            console.log("P1 wins");
+            // updateP1Score();
         }
     }
 }
