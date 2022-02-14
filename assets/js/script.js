@@ -1,6 +1,7 @@
 // wait for page to load
 
 let choices = ["paper", "rock", "scissors"]
+let p1Choice = "";
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
@@ -11,15 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
 
             if (this.getAttribute("data-type") === "rock") {
-                let p1Choice = "rock";
-                let aiChoice = choices[Math.floor(Math.random() * choices.length)];
-                console.log(aiChoice);
+                p1Choice = "rock";
+                aiChoice = choices[Math.floor(Math.random() * choices.length)];
+                console.log("AI chose",
+                    aiChoice);
+                console.log(p1Choice);
+                checkDrawGame();
             } else if (this.getAttribute("data-type") === "paper") {
-                let p1Choice = "paper";
-                let aiChoice = choices[Math.floor(Math.random() * choices.length)];
+                p1Choice = "paper";
+                aiChoice = choices[Math.floor(Math.random() * choices.length)];
             } else if (this.getAttribute("data-type") === "scissors") {
-                let p1Choice = "scissors";
-                let aiChoice = choices[Math.floor(Math.random() * choices.length)];
+                p1Choice = "scissors";
+                aiChoice = choices[Math.floor(Math.random() * choices.length)];
             }
         })
     }
@@ -28,14 +32,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function checkDrawGame() {
     if (p1Choice === aiChoice) {
-        updateDrawScore();
-        console.log("draw")
+        // updateDrawScore();
+        console.log("draw");
     } else {
+        console.log("not a draw");
         gameWinner();
     }
 }
 
-// function gameWinner()
+function gameWinner() {
+    if (p1Choice = "rock") {
+        if (aiChoice = "paper") {
+            console.log("AI wins");
+        } else {
+            console.log("P1 wins");
+        }
+    } else {
+        console.log("carry on")
+    }
+}
 
 // function updateDrawScore()
 
