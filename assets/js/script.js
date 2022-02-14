@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             aiChoice = choices[Math.floor(Math.random() * choices.length)];
             console.log("AI chose",
                 aiChoice);
+            displayP1Choice();
+            displayAiChoice();
             console.log("p1 chose", p1Choice);
             checkDrawGame();
         })
@@ -60,6 +62,26 @@ function gameWinner() {
             console.log("P1 wins");
             // updateP1Score();
         }
+    }
+}
+
+function displayP1Choice() {
+    if (p1Choice == "rock") {
+        document.getElementById("player-choice").innerHTML = 'Player chose rock <i class="fas fa-hand-rock"></i>';
+    } else if (p1Choice == "paper") {
+        document.getElementById("player-choice").innerHTML = 'Player chose paper <i class="fas fa-hand-paper"></i>';
+    } else if (p1Choice == "scissors") {
+        document.getElementById("player-choice").innerHTML = 'Player chose scissors <i class="fas fa-hand-scissors"></i>';
+    }
+}
+
+function displayAiChoice() {
+    if (p1Choice == "rock") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose rock <i class="fas fa-hand-rock"></i>';
+    } else if (p1Choice == "paper") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose paper <i class="fas fa-hand-paper"></i>';
+    } else if (p1Choice == "scissors") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose scissors <i class="fas fa-hand-scissors"></i>';
     }
 }
 

@@ -70,11 +70,13 @@ button:hover {
 #player-choice {
     float: left;
     width: 45%;
+    color: green;
 }
 
 #ai-choice {
     float: right;
     width: 45%;
+    color: green;
 }
 
 #score-area {
