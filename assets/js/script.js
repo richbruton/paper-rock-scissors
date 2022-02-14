@@ -67,21 +67,21 @@ function gameWinner() {
 
 function displayP1Choice() {
     if (p1Choice == "rock") {
-        document.getElementById("player-choice").innerHTML = 'Player chose rock <i class="fas fa-hand-rock"></i>';
+        document.getElementById("player-choice").innerHTML = 'Player chose rock <br> <i class="fas fa-hand-rock"></i>';
     } else if (p1Choice == "paper") {
-        document.getElementById("player-choice").innerHTML = 'Player chose paper <i class="fas fa-hand-paper"></i>';
+        document.getElementById("player-choice").innerHTML = 'Player chose paper <br> <i class="fas fa-hand-paper"></i>';
     } else if (p1Choice == "scissors") {
-        document.getElementById("player-choice").innerHTML = 'Player chose scissors <i class="fas fa-hand-scissors"></i>';
+        document.getElementById("player-choice").innerHTML = 'Player chose scissors <br> <i class="fas fa-hand-scissors"></i>';
     }
 }
 
 function displayAiChoice() {
-    if (p1Choice == "rock") {
-        document.getElementById("ai-choice").innerHTML = 'Computer chose rock <i class="fas fa-hand-rock"></i>';
-    } else if (p1Choice == "paper") {
-        document.getElementById("ai-choice").innerHTML = 'Computer chose paper <i class="fas fa-hand-paper"></i>';
-    } else if (p1Choice == "scissors") {
-        document.getElementById("ai-choice").innerHTML = 'Computer chose scissors <i class="fas fa-hand-scissors"></i>';
+    if (aiChoice == "rock") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose rock <br> <i class="fas fa-hand-rock"></i>';
+    } else if (aiChoice == "paper") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose paper <br> <i class="fas fa-hand-paper"></i>';
+    } else if (aiChoice == "scissors") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose scissors <br> <i class="fas fa-hand-scissors"></i>';
     }
 }
 

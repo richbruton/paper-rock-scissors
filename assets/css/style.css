@@ -38,12 +38,12 @@ div {
 /* Game area */
 #game-area {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
 }
 
 #selection-area {
     width: 75%;
-    height: 40%;
+    height: 60%;
 }
 
 button {
@@ -71,22 +71,31 @@ button:hover {
     float: left;
     width: 45%;
     color: green;
+    height: 40%;
+}
+
+#player-choice>i {
+    font-size: 300%;
 }
 
 #ai-choice {
     float: right;
     width: 45%;
     color: green;
+    height: 40%;
+}
+
+#ai-choice>i {
+    font-size: 300%;
 }
 
 #score-area {
     width: 75%;
-    height: 15vh;
+    height: 20vh;
+}
 
-    span {
-        display: inline;
-        padding: 2px;
-    }
+#score-area>h2 {
+    color: blue;
 }
 
 footer {
