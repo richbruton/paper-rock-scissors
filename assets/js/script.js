@@ -2,6 +2,8 @@
 
 let choices = ["paper", "rock", "scissors"]
 
+var draw = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function checkDrawGame() {
     if (p1Choice === aiChoice) {
-        // updateDrawScore();
+        updateDrawScore();
         console.log("draw");
     } else {
         gameWinner();
@@ -84,7 +86,10 @@ function displayAiChoice() {
     }
 }
 
-// function updateDrawScore() 
+function updateDrawScore() {
+    draw = draw + 1;
+    document.getElementById("draw").innerHTML = draw;
+}
 
 
 // function updateP1Score()
