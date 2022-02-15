@@ -32,7 +32,6 @@ function checkDrawGame() {
         // updateDrawScore();
         console.log("draw");
     } else {
-        console.log("not a draw");
         gameWinner();
     }
 }
@@ -85,7 +84,8 @@ function displayAiChoice() {
     }
 }
 
-// function updateDrawScore()
+// function updateDrawScore() 
+
 
 // function updateP1Score()
 
