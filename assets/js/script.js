@@ -3,6 +3,8 @@
 let choices = ["paper", "rock", "scissors"]
 
 var draw = 0;
+var p1score = 0;
+var aiscore = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
@@ -42,26 +44,26 @@ function gameWinner() {
     if (p1Choice == "rock") {
         if (aiChoice == "paper") {
             console.log("AI wins");
-            // updateAiScore();
+            updateAiScore();
         } else if (aiChoice == "scissors") {
             console.log("P1 wins");
-            // updateP1Score();
+            updateP1Score();
         }
     } else if (p1Choice == "paper") {
         if (aiChoice == "scissors") {
             console.log("AI wins");
-            // updateAiScore();
+            updateAiScore();
         } else if (aiChoice == "rock") {
             console.log("P1 wins");
-            // updateP1Score();
+            updateP1Score();
         }
     } else if (p1Choice == "scissors") {
         if (aiChoice == "rock") {
             console.log("AI wins");
-            // updateAiScore();
+            updateAiScore();
         } else if (aiChoice == "paper") {
             console.log("P1 wins");
-            // updateP1Score();
+            updateP1Score();
         }
     }
 }
@@ -91,10 +93,15 @@ function updateDrawScore() {
     document.getElementById("draw").innerHTML = draw;
 }
 
+function updateP1Score() {
+    p1score = p1score + 1;
+    document.getElementById("p1-score").innerHTML = p1score;
+}
 
-// function updateP1Score()
-
-// function UpdateAiScore()
+function updateAiScore() {
+    aiscore = aiscore + 1;
+    document.getElementById("ai-score").innerHTML = aiscore;
+}
 
 // function contestWinner()
 
