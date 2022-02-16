@@ -69,7 +69,7 @@ button:hover {
 
 #player-choice {
     float: left;
-    width: 45%;
+    width: 47.5%;
     color: green;
     height: 40%;
 }
@@ -80,7 +80,7 @@ button:hover {
 
 #ai-choice {
     float: right;
-    width: 45%;
+    width: 47.5%;
     color: green;
     height: 40%;
 }

@@ -31,6 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 })
 
+function displayP1Choice() {
+    if (p1Choice == "rock") {
+        document.getElementById("player-choice").innerHTML = 'Player chose rock <br> <i class="fas fa-hand-rock"></i>';
+    } else if (p1Choice == "paper") {
+        document.getElementById("player-choice").innerHTML = 'Player chose paper <br> <i class="fas fa-hand-paper"></i>';
+    } else if (p1Choice == "scissors") {
+        document.getElementById("player-choice").innerHTML = 'Player chose scissors <br> <i class="fas fa-hand-scissors"></i>';
+    }
+}
+
+function displayAiChoice() {
+    if (aiChoice == "rock") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose rock <br> <i class="fas fa-hand-rock"></i>';
+    } else if (aiChoice == "paper") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose paper <br> <i class="fas fa-hand-paper"></i>';
+    } else if (aiChoice == "scissors") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose scissors <br> <i class="fas fa-hand-scissors"></i>';
+    }
+}
+
 function checkDrawGame() {
     if (p1Choice === aiChoice) {
         updateDrawScore();
@@ -68,30 +88,14 @@ function gameWinner() {
     }
 }
 
-function displayP1Choice() {
-    if (p1Choice == "rock") {
-        document.getElementById("player-choice").innerHTML = 'Player chose rock <br> <i class="fas fa-hand-rock"></i>';
-    } else if (p1Choice == "paper") {
-        document.getElementById("player-choice").innerHTML = 'Player chose paper <br> <i class="fas fa-hand-paper"></i>';
-    } else if (p1Choice == "scissors") {
-        document.getElementById("player-choice").innerHTML = 'Player chose scissors <br> <i class="fas fa-hand-scissors"></i>';
-    }
-}
 
-function displayAiChoice() {
-    if (aiChoice == "rock") {
-        document.getElementById("ai-choice").innerHTML = 'Computer chose rock <br> <i class="fas fa-hand-rock"></i>';
-    } else if (aiChoice == "paper") {
-        document.getElementById("ai-choice").innerHTML = 'Computer chose paper <br> <i class="fas fa-hand-paper"></i>';
-    } else if (aiChoice == "scissors") {
-        document.getElementById("ai-choice").innerHTML = 'Computer chose scissors <br> <i class="fas fa-hand-scissors"></i>';
-    }
-}
 
 function updateDrawScore() {
     draw = draw + 1;
     document.getElementById("draw").innerHTML = draw;
-    alert("It's a draw! Try again!");
+    setTimeout(function () {
+        alert("It's a draw! Try again!");
+    }, 500);
 }
 
 function updateP1Score() {
@@ -100,7 +104,9 @@ function updateP1Score() {
     if (p1score === 5) {
         contestWinner();
     } else {
-        alert("You have won this round! Keep going!");
+        setTimeout(function () {
+            alert("You have won this round! Keep going!");
+        }, 500);
     }
 }
 
@@ -110,15 +116,21 @@ function updateAiScore() {
     if (aiscore === 5) {
         contestWinner();
     } else {
-        alert("The computer has beaten you this time, try again!");
+        setTimeout(function () {
+            alert("The computer has beaten you this time, try again!");
+        }, 500);
     }
 }
 
 function contestWinner() {
     if (aiscore === 5) {
-        alert("Hard luck, the computer has defeated you! Fancy another shot at the title?");
+        setTimeout(function () {
+            alert("Hard luck, the computer has defeated you! Fancy another shot at the title?");
+        }, 500);
     } else if (p1score === 5) {
-        alert("You have defeated the mighty computer! Congratulations, can you defend you title?")
+        setTimeout(function () {
+            alert("You have defeated the mighty computer! Congratulations, can you defend you title?")
+        }, 500);
     }
     newGame();
 }
