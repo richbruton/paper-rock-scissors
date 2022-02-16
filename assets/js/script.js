@@ -124,5 +124,5 @@ function contestWinner() {
 }
 
 function newGame() {
-
+    location.reload();
 }
