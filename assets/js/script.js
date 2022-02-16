@@ -129,7 +129,7 @@ function contestWinner() {
         }, 500);
     } else if (p1score === 5) {
         setTimeout(function () {
-            alert("You have defeated the mighty computer! Congratulations, can you defend you title?")
+            alert("You have defeated the mighty computer! Congratulations, can you defend your title?");
         }, 500);
     }
     newGame();
