@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
             displayAiChoice();
             console.log("p1 chose", p1Choice);
             checkDrawGame();
-        })
+        });
     }
-})
+});
 
 function displayP1Choice() {
     if (p1Choice == "rock") {
