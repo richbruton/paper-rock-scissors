@@ -136,5 +136,7 @@ function contestWinner() {
 }
 
 function newGame() {
-    location.reload();
+    setTimeout(function () {
+        location.reload();
+    }, 3000);
 }
