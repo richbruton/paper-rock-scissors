@@ -91,18 +91,38 @@ function displayAiChoice() {
 function updateDrawScore() {
     draw = draw + 1;
     document.getElementById("draw").innerHTML = draw;
+    alert("It's a draw! Try again!");
 }
 
 function updateP1Score() {
     p1score = p1score + 1;
     document.getElementById("p1-score").innerHTML = p1score;
+    if (p1score === 5) {
+        contestWinner();
+    } else {
+        alert("You have won this round! Keep going!");
+    }
 }
 
 function updateAiScore() {
     aiscore = aiscore + 1;
     document.getElementById("ai-score").innerHTML = aiscore;
+    if (aiscore === 5) {
+        contestWinner();
+    } else {
+        alert("The computer has beaten you this time, try again!");
+    }
 }
 
-// function contestWinner()
+function contestWinner() {
+    if (aiscore === 5) {
+        alert("Hard luck, the computer has defeated you! Fancy another shot at the title?");
+    } else if (p1score === 5) {
+        alert("You have defeated the mighty computer! Congratulations, can you defend you title?")
+    }
+    newGame();
+}
 
-// function newGame()
+function newGame() {
+
+}
