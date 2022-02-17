@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function displayP1Choice() {
     if (p1Choice == "rock") {
-        document.getElementById("player-choice").innerHTML = 'Player chose rock <br> <i class="fas fa-hand-rock"></i>';
+        document.getElementById("player-choice").innerHTML = 'Player 1 chose rock <br> <i class="fas fa-hand-rock"></i>';
     } else if (p1Choice == "paper") {
-        document.getElementById("player-choice").innerHTML = 'Player chose paper <br> <i class="fas fa-hand-paper"></i>';
+        document.getElementById("player-choice").innerHTML = 'Player 1 chose paper <br> <i class="fas fa-hand-paper"></i>';
     } else if (p1Choice == "scissors") {
-        document.getElementById("player-choice").innerHTML = 'Player chose scissors <br> <i class="fas fa-hand-scissors"></i>';
+        document.getElementById("player-choice").innerHTML = 'Player 1 chose scissors <br> <i class="fas fa-hand-scissors"></i>';
     }
 }
 
