@@ -1,4 +1,4 @@
-# Rock Paper Scissors
+# Rock Paper Scissors Lizard Spock
 
 # User Stories
 
@@ -9,7 +9,7 @@
 
 ## Site owners
 
-
+Site owners want a website that will entertain users while they play the game on the site. They want the game to be intuitive. 
 
 # Design
 
@@ -22,6 +22,23 @@
 # Bugs
 
 Could not get initial loop to work, changing the variable declaration form `let buttons = document.getElementsById("button");` to `let buttons = document.getElementsByTagName("button");` made it work.
+
+Alerts were appearing before the player and computer's choice was populated and score updated. When either the player or computer reached 5 points the page would reload before the score updated. The following code was used : 
+
+    setTimeout(function () {
+        alert("It's a draw! Try again!");
+    }, 500); 
+
+This gave the user the chance to see what the computer chose before being told who won the round. The 0.5 second delay allowed for the Javacript to populate the DOM before sending the alert. 
+
+To overcome the scenario where the page reloaded as soon either party scored 5 points, a similar time out function was used. In this case the function would have a longer time out, 3 seconds, to give the user an oppurtunity to look at the scoreboard and make a screenshot of the outcome if they desired. The following code gace the desired delay to the reload:
+
+    function newGame() {
+        setTimeout(function () {
+            location.reload();
+        }, 3000);
+    }
+
 
 # Testing
 
