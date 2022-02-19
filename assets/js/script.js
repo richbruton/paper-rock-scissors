@@ -1,5 +1,5 @@
 // choices for the AI to select from
-let choices = ["paper", "rock", "scissors", "lizard", "spock"]
+let choices = ["paper", "rock", "scissors", "lizard", "spock"];
 
 // variables to store the scores and number of draws in the contest
 var draw = 0;

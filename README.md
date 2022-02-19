@@ -3,13 +3,14 @@
 # User Stories
 
 ## First time user
-
+The first time user should know instinctively that they need to press a button to start the game. The score board should keep them interested and competitively engaged in the game. 
 
 ## Returning user
+The returning user will be interested in either trying to beat the game or to win with as few draws or computer wins as possible. The short time commitment involved will encourage them to share the game with friends and to play it when trying to fill some time.
 
 ## Site owners
 
-Site owners want a website that will entertain users while they play the game on the site. They want the game to be intuitive. 
+Site owners want a website that will entertain users while they play the game on the site. They want the game to be intuitive and easy to access.
 
 # Design
 
