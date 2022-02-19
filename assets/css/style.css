@@ -120,6 +120,10 @@ footer {
         font-size: large;
     }
 
+    button {
+        font-size: 0.8rem;
+    }
+
     #selection-area {
         width: 90%;
     }
