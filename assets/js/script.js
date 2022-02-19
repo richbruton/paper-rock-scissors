@@ -1,11 +1,12 @@
-// wait for page to load
-
+// choices for the AI to select from
 let choices = ["paper", "rock", "scissors", "lizard", "spock"]
 
+// variables to store the scores and number of draws in the contest
 var draw = 0;
 var p1score = 0;
 var aiscore = 0;
 
+// wait for page to load before starting a loop
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// function to display the players choice on index.html
 function displayP1Choice() {
     if (p1Choice == "rock") {
         document.getElementById("player-choice").innerHTML = 'Player 1 chose rock <br> <i class="fas fa-hand-rock"></i>';
@@ -49,6 +51,7 @@ function displayP1Choice() {
     }
 }
 
+// function to display the computers choice on index.html
 function displayAiChoice() {
     if (aiChoice == "rock") {
         document.getElementById("ai-choice").innerHTML = 'Computer chose rock <br> <i class="fas fa-hand-rock"></i>';
@@ -63,6 +66,7 @@ function displayAiChoice() {
     }
 }
 
+// function to check if the game is a draw, if not it calls on a function to delcare a winner
 function checkDrawGame() {
     if (p1Choice === aiChoice) {
         updateDrawScore();
@@ -72,6 +76,7 @@ function checkDrawGame() {
     }
 }
 
+// function to declare a winner of the round
 function gameWinner() {
     if (p1Choice == "rock") {
         if (aiChoice == "paper" || aiChoice == "spock") {
@@ -116,8 +121,7 @@ function gameWinner() {
     }
 }
 
-
-
+// function to update the numer of draws so far in the contest.
 function updateDrawScore() {
     draw = draw + 1;
     document.getElementById("draw").innerHTML = draw;
@@ -126,6 +130,7 @@ function updateDrawScore() {
     }, 500);
 }
 
+// function to update the player's score on index.html
 function updateP1Score() {
     p1score = p1score + 1;
     document.getElementById("p1-score").innerHTML = p1score;
@@ -138,6 +143,7 @@ function updateP1Score() {
     }
 }
 
+// function to update the computers score on index.html
 function updateAiScore() {
     aiscore = aiscore + 1;
     document.getElementById("ai-score").innerHTML = aiscore;
@@ -150,6 +156,7 @@ function updateAiScore() {
     }
 }
 
+// function to delcare a contest winner
 function contestWinner() {
     if (aiscore === 5) {
         setTimeout(function () {
@@ -163,6 +170,7 @@ function contestWinner() {
     newGame();
 }
 
+// function to reload the page and start a new game
 function newGame() {
     setTimeout(function () {
         location.reload();
