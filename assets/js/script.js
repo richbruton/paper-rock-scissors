@@ -74,26 +74,42 @@ function checkDrawGame() {
 
 function gameWinner() {
     if (p1Choice == "rock") {
-        if (aiChoice == "paper") {
+        if (aiChoice == "paper" || aiChoice == "spock") {
             console.log("AI wins");
             updateAiScore();
-        } else if (aiChoice == "scissors") {
+        } else if (aiChoice == "scissors" || aiChoice == "lizard") {
             console.log("P1 wins");
             updateP1Score();
         }
     } else if (p1Choice == "paper") {
-        if (aiChoice == "scissors") {
+        if (aiChoice == "scissors" || aiChoice == "lizard") {
             console.log("AI wins");
             updateAiScore();
-        } else if (aiChoice == "rock") {
+        } else if (aiChoice == "rock" || aiChoice == "spock") {
             console.log("P1 wins");
             updateP1Score();
         }
     } else if (p1Choice == "scissors") {
-        if (aiChoice == "rock") {
+        if (aiChoice == "rock" || aiChoice == "spock") {
             console.log("AI wins");
             updateAiScore();
-        } else if (aiChoice == "paper") {
+        } else if (aiChoice == "paper" || aiChoice == "lizard") {
+            console.log("P1 wins");
+            updateP1Score();
+        }
+    } else if (p1Choice == "lizard") {
+        if (aiChoice == "rock" || aiChoice == "scissors") {
+            console.log("AI wins");
+            updateAiScore();
+        } else if (aiChoice == "paper" || aiChoice == "spock") {
+            console.log("P1 wins");
+            updateP1Score();
+        }
+    } else if (p1Choice == "spock") {
+        if (aiChoice == "paper" || aiChoice == "lizard") {
+            console.log("AI wins");
+            updateAiScore();
+        } else if (aiChoice == "rock" || aiChoice == "scissors") {
             console.log("P1 wins");
             updateP1Score();
         }
