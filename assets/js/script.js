@@ -1,6 +1,6 @@
 // wait for page to load
 
-let choices = ["paper", "rock", "scissors"]
+let choices = ["paper", "rock", "scissors", "lizard", "spock"]
 
 var draw = 0;
 var p1score = 0;
@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 p1Choice = "paper";
             } else if (this.getAttribute("data-type") === "scissors") {
                 p1Choice = "scissors";
+            } else if (this.getAttribute("data-type") === "lizard") {
+                p1Choice = "lizard";
+            } else if (this.getAttribute("data-type") === "spock") {
+                p1Choice = "spock";
             }
             aiChoice = choices[Math.floor(Math.random() * choices.length)];
             console.log("AI chose",
