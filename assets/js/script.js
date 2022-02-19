@@ -42,6 +42,10 @@ function displayP1Choice() {
         document.getElementById("player-choice").innerHTML = 'Player 1 chose paper <br> <i class="fas fa-hand-paper"></i>';
     } else if (p1Choice == "scissors") {
         document.getElementById("player-choice").innerHTML = 'Player 1 chose scissors <br> <i class="fas fa-hand-scissors"></i>';
+    } else if (p1Choice == "lizard") {
+        document.getElementById("player-choice").innerHTML = 'Player 1 chose lizard <br> <i class="fas fa-hand-lizard"></i>';
+    } else if (p1Choice == "spock") {
+        document.getElementById("player-choice").innerHTML = 'Player 1 chose spock <br> <i class="fas fa-hand-spock"></i>';
     }
 }
 
@@ -52,6 +56,10 @@ function displayAiChoice() {
         document.getElementById("ai-choice").innerHTML = 'Computer chose paper <br> <i class="fas fa-hand-paper"></i>';
     } else if (aiChoice == "scissors") {
         document.getElementById("ai-choice").innerHTML = 'Computer chose scissors <br> <i class="fas fa-hand-scissors"></i>';
+    } else if (aiChoice == "lizard") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose lizard <br> <i class="fas fa-hand-lizard"></i>';
+    } else if (aiChoice == "spock") {
+        document.getElementById("ai-choice").innerHTML = 'Computer chose spock <br> <i class="fas fa-hand-spock"></i>';
     }
 }
 
