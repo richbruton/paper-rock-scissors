@@ -52,6 +52,12 @@ After the player makes a selection, the display area will populate with the Play
 
 ## Score Area
 
+The score area will display the number of points that the Player and Computer has scored in the contest. It will allow the User to keep track of where they are in the contest and how crucial their next move will be. The score area also keeps tabs on the number of drawn games but drawn games do not affect the contest other than to prolong it. 
+
+![Score after 1 round](/assets/docs/score-1-round.png "Score board after one round")
+
+![Final Score](/assets/docs/final-score.png "Contest final score")
+
 ## Footer/Rules
 
 ## Alerts
@@ -87,8 +93,9 @@ This gave the user the chance to see what the computer chose before being told w
 
 # Testing
 
+## Validation
 
-# Manual Testing
+## Manual Testing
 
 
 
