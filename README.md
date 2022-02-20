@@ -117,9 +117,39 @@ This gave the user the chance to see what the computer chose before being told w
 
 ## Validation
 
+### HTML
+
+HTML validation was carried out through [W3](https://validator.w3.org/) and it returned no errors or warnings.
+
+![HTML validator](/assets/docs/html-valid.png "No errors or warnings to show in HTML")
+
+### CSS
+
+CSS validation was carried out through [W3](https://jigsaw.w3.org/css-validator/) and it returned no errors.
+
+![CSS validator](/assets/docs/css-valid.png "No CSS errors found")
+
+The CSS validator did warn that imported style sheets would not be checked. This is due to the use of Google fonts.
+
+![CSS validator warning](/assets/docs/css-warning.png "Imported styles sheets are not checked in direct input and file upload modes")
+
+### JavaScript
+
+Running the Javascript code through [JSHint](https://jshint.com/) returned no errors but it did return 5 warnings.
+
+![JShint warnings](/assets/docs/jshint-warning.png)
+
 ## Manual Testing
 
+Manual testing was carried out at a number of different stages by utilising the `console.log()` function in Javascript. This was used to ensure that each individual function worked before writing it back to the DOM. 
 
+Throughout the build testing was carried out in the preview port with developer tools open to see the console. 
+
+When the JS script was written the site was deployed and shared to a few people to test on different devices. This testing was used to fine tune the CSS to make sure the site stayed responsive. It also helped to remove a few typos. 
+
+Devices used for testing include but not limited to: iPhone, iPad, Macbook, Samsung phone of unkwown type, Microsoft Surface Pro. 
+
+Browsers used for testing include Google Chrome, Microsoft Edge and Safari.
 
 
 # Deployment
