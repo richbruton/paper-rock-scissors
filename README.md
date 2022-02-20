@@ -60,7 +60,29 @@ The score area will display the number of points that the Player and Computer ha
 
 ## Footer/Rules
 
+The footer contains the rules of the game. These include the conditions required for the player to win a round for each of the player's options. The rules also state the conditions required to win the contest.
+
+![Rules footer](/assets/docs/rules-footer.png "Game rules")
+
 ## Alerts
+
+Alerts are used throughout the game to inform the user of the outcome of each round and the outcome of the overall contest. This is to keep the player engaged in the game but also to prevent them from making numerous selections in quick succession. 
+
+Alerts for after each round were given a 0.5 second delay, this is to allow the display are and score area to populate before the alert is triggered. 
+
+![alert draw](/assets/docs/draw.png "Alert for a drawn round")
+
+![alert player wins](/assets/docs/player-wins.png "alert for player winning a round")
+
+![alert computer wins](/assets/docs/computer-wins.png "alert for computer winning a round")
+
+There is a seperate alert for the end of the contest, below is an example of an alaert of the players wins the contest
+
+![alert player wins contest](/assets/docs/player-wins-contest.png "alert for player winning the contest")
+
+## New Game
+
+After the game is completed, there is a function that reloads the page after 3 seconds to allow the user to attempt the game again. The 3 second delay is to allow time to look at the scoreboard and to take a screen shot if desired.
 
 ## Future features
 
