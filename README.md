@@ -1,5 +1,6 @@
 # Rock Paper Scissors Lizard Spock
 
+
 # User Stories
 
 ## First time user
@@ -14,17 +15,41 @@ Site owners want a website that will entertain users while they play the game on
 
 # Design
 
+The site is designed to that the UX is as straight forward as possible, to keep the user's focus on the game and their entertainment. The primary focus for the user will be the selection buttons, which will start the game or the round and allow the user to select their choice for the round. Two divs side by side below the selection buttons will start empty but will populate with the player's and computer's choice for each round. Below the display area there is a score board. The score board displays the user's and computer's scores. It also will display the number of drawn rounds, but draws will not impact the score. Draws will prolong the contest adding to the anticpation of the game.
+
+Underneath the score board there will be a set of rules. These will be the conditions required for a win for each of the possible Player choices, and the parameters required to win the contest.
+
+![Site wireframe](/assets/docs/wireframe.png "wireframe")
+
+To prevent speed playing, by which the user just clicks the buttons as fast as possible to complete the game at speed, there is a series of alerts to inform the user of the outcome of each round and the eventual contest winner.
+
+![Site wireframe with alert](/assets/docs/wireframe-alert.png "wireframe with alert")
+
 # Features
+
+## Title and subheading
+
+The title of the game is the main heading of of the site. The sub heading is used to indicate that the user is required to make a choice in the next stage of the game.
+
+![Paper Rock Scissors Lizard Spock](/assets/docs/title.png)
+
+
+## Selection Area
+
+In this area there are five buttons of equal size, each button indicates a different choice for the user. The buttons each display the name of the choice and a FontAwesome indication of the choice
 
 
 ## Future features
 
+1. An option to change the parameters required to win.
+
+2. An option to change the game from "Paper, rocks, scissors, lizard", spock to a simpler "paper, rock, scissors".
 
 # Bugs
 
-Could not get initial loop to work, changing the variable declaration form `let buttons = document.getElementsById("button");` to `let buttons = document.getElementsByTagName("button");` made it work.
+1. Could not get initial loop to work, changing the variable declaration form `let buttons = document.getElementsById("button");` to `let buttons = document.getElementsByTagName("button");` made it work.
 
-Alerts were appearing before the player and computer's choice was populated and score updated. When either the player or computer reached 5 points the page would reload before the score updated. The following code was used : 
+2. Alerts were appearing before the player and computer's choice was populated and score updated. When either the player or computer reached 5 points the page would reload before the score updated. The following code was used : 
 
     setTimeout(function () {
         alert("It's a draw! Try again!");
@@ -32,13 +57,15 @@ Alerts were appearing before the player and computer's choice was populated and 
 
 This gave the user the chance to see what the computer chose before being told who won the round. The 0.5 second delay allowed for the Javacript to populate the DOM before sending the alert. 
 
-To overcome the scenario where the page reloaded as soon either party scored 5 points, a similar time out function was used. In this case the function would have a longer time out, 3 seconds, to give the user an oppurtunity to look at the scoreboard and make a screenshot of the outcome if they desired. The following code gace the desired delay to the reload:
+3. To overcome the scenario where the page reloaded as soon either party scored 5 points, a similar time out function was used. In this case the function would have a longer time out, 3 seconds, to give the user an oppurtunity to look at the scoreboard and make a screenshot of the outcome if they desired. The following code gace the desired delay to the reload:
 
     function newGame() {
         setTimeout(function () {
             location.reload();
         }, 3000);
     }
+
+4. The game was initially to be only "paper, rock, scissors" but through testing it was found that a drawn round was much too prevalent. Adding lizard and spock to the game changed the frequency of a drawn game from 33% to 20%. 
 
 
 # Testing
@@ -78,6 +105,8 @@ To overcome the scenario where the page reloaded as soon either party scored 5 p
 6. Press enter to clone the repository.
 
 # Credits
+
+The setTimeout function was learnt from [W3schools](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 
 # Acknowledgements
 
