@@ -31,13 +31,30 @@ To prevent speed playing, by which the user just clicks the buttons as fast as p
 
 The title of the game is the main heading of of the site. The sub heading is used to indicate that the user is required to make a choice in the next stage of the game.
 
-![Paper Rock Scissors Lizard Spock](/assets/docs/title.png)
+![Paper Rock Scissors Lizard Spock](/assets/docs/title.png "heading and subheading")
 
 
 ## Selection Area
 
-In this area there are five buttons of equal size, each button indicates a different choice for the user. The buttons each display the name of the choice and a FontAwesome indication of the choice
+In this area there are five buttons of equal size, each button indicates a different choice for the user. The buttons each display the name of the choice and a FontAwesome indication of the choice. The buttons reverse their color and background color on a mouse hover, this allows the user to clearly see that selecting an option is the expected behaviour. 
 
+![Selection area](/assets/docs/selection.png "selection area")
+
+## Display Area
+
+The display area starts off as two divs will place holder text in them, the place holder text indicates to the user that the frist div belongs to "Player 1" and the second div belongs to "Computer"
+
+![choice area before](/assets/docs/choice-area-before.png "Player and computer choice display area before a selection has been made")
+
+After the player makes a selection, the display area will populate with the Player's div will show the player's choice and a font awesome icon depicting their choice. The Computer's div will display a similar message and icon but this will be populated by a radom selection from the "choices" array. 
+
+![choice area after](/assets/docs/choice-area-after.png "Player and computer choice display area after a selection has been made")
+
+## Score Area
+
+## Footer/Rules
+
+## Alerts
 
 ## Future features
 
@@ -73,9 +90,7 @@ This gave the user the chance to see what the computer chose before being told w
 
 # Manual Testing
 
-## First time user
 
-## Returning user
 
 
 # Deployment
