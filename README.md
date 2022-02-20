@@ -182,6 +182,10 @@ Browsers used for testing include Google Chrome, Microsoft Edge and Safari.
 
 The setTimeout function was learnt from [W3schools](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 
+Game icons were taken from [Font Awesome](https://fontawesome.com/)
+
+Fonts are from [Google Fonts](https://fonts.google.com/)
+
 # Acknowledgements
 
 A big thank you to Jack Wachira, for all of his input throughout this project.
