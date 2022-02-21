@@ -26,11 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 p1Choice = "spock";
             }
             aiChoice = choices[Math.floor(Math.random() * choices.length)];
-            console.log("AI chose",
-                aiChoice);
             displayP1Choice();
             displayAiChoice();
-            console.log("p1 chose", p1Choice);
             checkDrawGame();
         });
     }
@@ -66,11 +63,10 @@ function displayAiChoice() {
     }
 }
 
-// function to check if the game is a draw, if not it calls on a function to delcare a winner
+// function to check if the game is a draw, if not it calls on a function to declare a winner
 function checkDrawGame() {
     if (p1Choice === aiChoice) {
         updateDrawScore();
-        console.log("draw");
     } else {
         gameWinner();
     }
@@ -80,48 +76,38 @@ function checkDrawGame() {
 function gameWinner() {
     if (p1Choice == "rock") {
         if (aiChoice == "paper" || aiChoice == "spock") {
-            console.log("AI wins");
             updateAiScore();
         } else if (aiChoice == "scissors" || aiChoice == "lizard") {
-            console.log("P1 wins");
             updateP1Score();
         }
     } else if (p1Choice == "paper") {
         if (aiChoice == "scissors" || aiChoice == "lizard") {
-            console.log("AI wins");
             updateAiScore();
         } else if (aiChoice == "rock" || aiChoice == "spock") {
-            console.log("P1 wins");
             updateP1Score();
         }
     } else if (p1Choice == "scissors") {
         if (aiChoice == "rock" || aiChoice == "spock") {
-            console.log("AI wins");
             updateAiScore();
         } else if (aiChoice == "paper" || aiChoice == "lizard") {
-            console.log("P1 wins");
             updateP1Score();
         }
     } else if (p1Choice == "lizard") {
         if (aiChoice == "rock" || aiChoice == "scissors") {
-            console.log("AI wins");
             updateAiScore();
         } else if (aiChoice == "paper" || aiChoice == "spock") {
-            console.log("P1 wins");
             updateP1Score();
         }
     } else if (p1Choice == "spock") {
         if (aiChoice == "paper" || aiChoice == "lizard") {
-            console.log("AI wins");
             updateAiScore();
         } else if (aiChoice == "rock" || aiChoice == "scissors") {
-            console.log("P1 wins");
             updateP1Score();
         }
     }
 }
 
-// function to update the numer of draws so far in the contest.
+// function to update the number of draws so far in the contest.
 function updateDrawScore() {
     draw = draw + 1;
     document.getElementById("draw").innerHTML = draw;
